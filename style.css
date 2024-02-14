@@ -1,0 +1,342 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Space Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #c5e4e7;
+}
+
+a {
+  text-decoration: none;
+}
+
+p.Err {
+  font-size: 10px;
+  color: red;
+  display: none;
+}
+
+.set .label-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.set label {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* design */
+
+.title {
+  width: 75px;
+  margin-bottom: 60px;
+}
+
+.container {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 10px 30px 5px #43727422;
+}
+
+.set {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-bill {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.set input#bill {
+  position: relative;
+  width: 100%;
+  padding: 9px 15px;
+  border-radius: 5px;
+  border: 1.5px solid white;
+  background-color: #c4ecf05d;
+  color: #064d53;
+  direction: rtl;
+  caret-color: rgb(38, 206, 155);
+  font-size: 15px;
+}
+
+.set input#bill::placeholder {
+  color: #064d53;
+  opacity: .7;
+}
+
+.set input#bill:focus {
+  border: 1.5px solid rgb(38, 206, 155);
+  outline: 0;
+}
+
+.set input#bill + img {
+  width: 10px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.set label[for="custom"] {
+  margin-bottom: 10px;
+}
+
+.set .tip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.set .tip button {
+  width: 30%;
+  padding: 8px;
+  border: none;
+  background-color: #114e53;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  transition: .3s;
+}
+
+.set .tip button:hover {
+  background-color: #9fe8df;
+  color: #114e53;
+}
+
+.set .tip button.active {
+  background-color: #9fe8df;
+  color: #114e53;
+}
+
+.set .tip input {
+  width: 30%;
+  border-radius: 5px;
+  direction: rtl;
+  border-radius: 5px;
+  padding: 0px 10px;
+  border: 1.5px solid white;
+  background-color: #c4ecf05d;
+  color: #064d53;
+  direction: rtl;
+  caret-color: rgb(38, 206, 155);
+  font-size: 15px;
+}
+
+.set .tip input:focus {
+  border: 1.5px solid rgb(38, 206, 155);
+  outline: 0;
+}
+
+.set .tip input::placeholder {
+  text-align: center;
+  color: #064d53;
+  opacity: .7;
+}
+
+.set .people {
+  margin-top: 20px;
+}
+
+.people-input {
+  position: relative;
+}
+
+.set input#people {
+  position: relative;
+  width: 100%;
+  padding: 9px 15px;
+  border-radius: 5px;
+  border: 1.5px solid white;
+  background-color: #c4ecf05d;
+  color: #064d53;
+  direction: rtl;
+  caret-color: rgb(38, 206, 155);
+  font-size: 15px;
+}
+
+.set input#people::placeholder {
+  color: #064d53;
+  opacity: .7;
+}
+
+.set input#people:focus {
+  border: 1.5px solid rgb(38, 206, 155);
+  outline: 0;
+}
+
+.set input#people+img {
+  width: 10px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.result {
+  width: 50%;
+  padding: 30px 20px;
+  background-color: #064d53;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.result .tip-amount,
+.result .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.result .tip-amount .text p,
+.result .total .text p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.829);
+  font-weight: 700;
+}
+
+.result .tip-amount .text span,
+.result .total .text span {
+  font-size: 11px;
+  display: block;
+  color: #459a86;
+}
+
+.result .tip-amount span.tip-span,
+.result .total span.total-span {
+  font-size: 30px;
+  color: #44c0a3;
+  font-weight: bold;
+  word-break: break-word;
+}
+
+.result button.reset {
+  margin-top: auto;
+  padding: 8px 0px;
+  border: none;
+  border-radius: 5px;
+  color: #12555c;
+  background-color: #106c74;
+  transition: .3s;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.result button.reset:hover {
+  background-color: #9fe8df;
+  color: #114e53;
+}
+
+.result button.reset.active:hover {
+  background-color: #9fe8df;
+  color: #114e53;
+}
+
+.result button.reset.active {
+  background-color: #09b09c;
+  color: #0a4247;
+}
+
+/* end design */
+/* media query */
+/* small mobile */
+
+@media screen and (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+  img.title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  .container {
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .set {
+    width: 95%;
+    margin: 20px auto;
+  }
+  .set .tip button {
+    width: 48%;
+    font-size: 20px;
+  }
+  .set .tip input {
+    width: 48%;
+    font-size: 20px;
+  }
+  .result {
+    width: 100%;
+  }
+}
+
+/* tablet */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 80%;
+  }
+  img.title {
+    margin-bottom: 30px;
+  }
+  .container input#custom {
+    font-size: 13px;
+  }
+}
+
+/* laptop */
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .container {
+    width: 60%;
+  }
+  img.title {
+    margin-bottom: 40px;
+  }
+
+  .container input#custom {
+    font-size: 13px;
+  }
+}
+
+/* 4K */
+
+@media screen and (min-width: 2560px) {
+  .container {
+    width: 30%;
+  }
+}
